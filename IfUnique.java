@@ -6,11 +6,11 @@ public class IfUnique {
         isStringUnique("S p a c e");
     }
 
-    private static boolean isStringUnique(String s) {
+    private static void isStringUnique(String s) {
         // ASCII has only 128 unique characters
         //cant be unique if more then 128
         if (s.length() > 128) {
-            return false;
+            displayOutput(s+" -> False");
         }
         //can be maximum of 128
         int[] aCharSet = new int[128];
@@ -18,12 +18,15 @@ public class IfUnique {
         for (int i = 0; i < s.length(); i++) {
             int value = s.charAt(i);
             if(aCharSet[value] > 0) {
-                return false;
+                displayOutput(s+" -> False");
             } else {
                 aCharSet[value]++;
             }
         }
 
-        return true;
+        displayOutput(s+" -> True");
+    }
+    private static void displayOutput(String s){
+        System.out.println(s);
     }
 }
