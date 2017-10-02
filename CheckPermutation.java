@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class CheckPermutation {
 
 	public static void main(String[] args){
-        checkPermutation("god","dog");        
+        checkPermutation("god1","dog1");        
 	}
 	public static void checkPermutation (String str1, String str2){
 		//if both the strings are not of the same then it can not be a permutation of one other
